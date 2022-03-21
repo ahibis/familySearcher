@@ -1,0 +1,17 @@
+{
+  "name": "fplab2",
+  "version": "1.0.0",
+  "description": "lol",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ahibis <pokeseteve31@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^7.5.0",
+    "node-pre-gyp": "^0.17.0",
+    "sequelize": "^6.17.0",
+    "sqlite3": "^5.0.2"
+  }
+}

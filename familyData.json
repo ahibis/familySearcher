@@ -1,0 +1,31 @@
+{
+    "father": {
+        "name": "Антон",
+        "middleName": "Павлович",
+        "surname": "Гейшев",
+        "birthday": "2012-09-01",
+        "income": 800
+    },
+    "mother": {
+        "name": "Александра",
+        "middleName": "Валерьевна",
+        "surname": "Гейшевна",
+        "birthday": "2012-09-01",
+        "income": 300
+    },
+    "childs": [{
+        "name": "Екатерина",
+        "middleName": "Виктрона",
+        "surname": "Гейшевна",
+        "birthday": "2009-09-01",
+        "income": 400
+    },
+    {
+        "name": "Валентина",
+        "middleName": "Антоновна",
+        "surname": "Гейшевна",
+        "birthday": "2010-09-01",
+        "income": 0
+    }
+    ]
+}
