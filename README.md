@@ -21,4 +21,4 @@ the reactive project to search for certain people in the family database
 - sqlite3
 - lodash
 - vue.js 2
-- bootstrap.js
+- bootstrap
