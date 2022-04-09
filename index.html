@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/vue.js"></script>
+    <script src="js/lodash.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="js/vue-local-storage.min.js">
+    <script src="https://unpkg.com/vue-async-computed@3.9.0"></script>
+    <title>fp lab</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <select v-model="mode" class="w350">
+          <option :value="i" v-for="v,i in modes">{{v}}</option>
+        </select>
+        <div v-if="mode==0">
+          <h3>Отец</h3>
+          <person :data="newFamily.father"></person>
+          <h3>Мать</h3>
+          <person :data="newFamily.mother"></person>
+          <h3>Дети</h3>
+          <div v-for="child,i in newFamily.childs" v-if="newFamily.childs">
+            <h5 style="width: 320px; display: inline-block">
+              {{child.name}} {{child.middleName}}
+            </h5>
+            <button class="btn btn-danger btnDelete" @click="deleteChild(i)">
+              x
+            </button>
+            <child :data="child" :twins="twins[i]" v-if="child?.name"></child>
+          </div>
+          <div class="w350" style="display:flex;justify-content:space-between">
+            <button class="btn btn-success" @click="addChild">
+              добавить ребенка
+            </button>
+            <button class="btn btn-success" @click="saveFamily">
+              сохранить семью
+            </button>
+          </div>
+          
+        </div>
+        <div v-if="mode==1">
+          <div v-if="family?.father">
+            <h3>Отец</h3>
+            <person :data="family.father"></person>
+            <h3>Мать</h3>
+            <person :data="family.mother"></person>
+            <h3>Дети</h3>
+            <div v-for="child,i in family.childs" v-if="newFamily.childs">
+              <h5 style="width: 320px; display: inline-block">
+                {{child.name}} {{child.middleName}}
+              </h5>
+              <person :data="child"></person>
+            </div>
+          </div>
+          <button
+              class="btn btn-success"
+              @click="familyId=familyId>1?familyId-1:1"
+            >
+              <
+            </button>
+            <button class="btn">{{familyId}}</button>
+            <button
+              class="btn btn-success"
+              @click="familyId=familyId<familiesCount?familyId+1:familiesCount"
+            >
+              >
+            </button>
+        </div>
+        <div v-if="mode==2">
+          <div class="grid">
+            ФИО<input v-model="searchName" placeholder="ФИО">
+          </div>
+          <div v-if="z1">
+            <h4>Найденный человек</h4>
+            <person :data="z1"></person>
+          </div>
+          <div v-else>
+            Человек не найден
+          </div>
+        </div>
+        <div v-if="mode==3">
+          <div v-for="child,i in z2" v-if="z2">
+            <h5 style="width: 320px; display: inline-block">
+              {{child.name}} {{child.middleName}}
+            </h5>
+            <person :data="child"></person>
+          </div>
+          <div v-else>
+            таких детей нет
+          </div>
+        </div>
+        <div v-if="mode==4">
+          <div v-for="father,i in z3" v-if="z3">
+            <h5 style="width: 320px; display: inline-block">
+              {{father.name}} {{father.middleName}}
+            </h5>
+            <person :data="father"></person>
+          </div>
+          <div>
+            таких отцов
+          </div>
+        </div>
+        <div v-if="mode==5">
+          <div class="grid">
+            указанная дата <input type="date" v-model="myDate">
+          </div>
+          <div v-for="person,i in z4" v-if="z4">
+            <h5 style="width: 320px; display: inline-block">
+              {{person.name}} {{person.middleName}}
+            </h5>
+            <person :data="person"></person>
+          </div>
+          <div v-else>
+            таких мужей нет
+          </div>
+        </div>
+        <div v-if="mode==6">
+          <h3>Найдено семей у которых есть близнецы {{z5}}</h3>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

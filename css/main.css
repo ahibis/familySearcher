@@ -1,0 +1,12 @@
+.grid{
+    font-size: 11pt;
+    display: grid;
+    grid-template-columns: 150px 200px;
+}
+.w350{
+    width: 350px;
+}
+.btnDelete{
+    padding: 0px 7px 3px 7px!important;
+    line-height: normal;
+}

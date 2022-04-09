@@ -1,29 +1,29 @@
 {
     "father": {
-        "name": "Антон",
+        "name": "Геннадий",
         "middleName": "Павлович",
-        "surname": "Гейшев",
+        "surname": "Зябликов",
         "birthday": "2012-09-01",
-        "income": 800
+        "income": 600
     },
     "mother": {
         "name": "Александра",
         "middleName": "Валерьевна",
-        "surname": "Гейшевна",
+        "surname": "Зябликовна",
         "birthday": "2012-09-01",
-        "income": 300
-    },
-    "childs": [{
-        "name": "Екатерина",
-        "middleName": "Виктрона",
-        "surname": "Гейшевна",
-        "birthday": "2009-09-01",
         "income": 400
     },
+    "childs": [{
+        "name": "Александра",
+        "middleName": "Виктрона",
+        "surname": "Зябликовна",
+        "birthday": "2009-09-01",
+        "income": 100
+    },
     {
-        "name": "Валентина",
-        "middleName": "Антоновна",
-        "surname": "Гейшевна",
+        "name": "Галина",
+        "middleName": "Геннадевна",
+        "surname": "Зябликовна",
         "birthday": "2010-09-01",
         "income": 0
     }
