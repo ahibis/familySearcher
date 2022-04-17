@@ -17,7 +17,7 @@ the reactive project to search for certain people in the family database
 - node.js 14+
 - electron.js
 - electromon
-- sequelize 6
+- sequilize 6
 - sqlite3
 - lodash
 - vue.js 2
