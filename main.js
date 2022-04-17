@@ -7,6 +7,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 1024,
     height: 768,
+    icon: __dirname + '/favicon.ico',
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
@@ -17,7 +18,7 @@ function createWindow () {
   mainWindow.loadFile('index.html')
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

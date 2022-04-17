@@ -5,16 +5,46 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dev":"electromon ."
+    "dev": "electromon .",
+    "dist": "electron-builder"
   },
   "author": "ahibis <pokeseteve31@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "better-sqlite3": "^7.5.0",
-    "electron": "^17.1.2",
     "lodash": "^4.17.21",
     "node-pre-gyp": "^0.17.0",
     "sequelize": "^6.17.0",
     "sqlite3": "^5.0.2"
+  },
+  "build": {
+    "appId": "famylySercher.ahibis",
+    "productName": "famylySercher",
+    "copyright": "Copyright © 2022 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "js",
+      "database.sqlite",
+      "index.html",
+      "css",
+      "main.js",
+      "favicon.ico"
+    ],
+    "win": {
+      "icon": "favicon.ico"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "devDependencies": {
+    "electron": "^18.0.4",
+    "electron-builder": "^22.5.1"
   }
 }
