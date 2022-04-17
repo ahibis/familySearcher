@@ -1,4 +1,4 @@
-# FL2
+# FamilySearcher
 the reactive project to search for certain people in the family database
 ## Screenshots
 ![screen1](/github/screen1.png)
